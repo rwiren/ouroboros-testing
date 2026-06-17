@@ -105,25 +105,34 @@ python src/evolution.py --generations 150 --population 80
 
 ## References
 
+### Core Academic Framework (Peer-Reviewed)
+- Le Bihan, B. (2024). "The Great Loop: From Conformal Cyclic Cosmology to Aeon Monism." *Journal for General Philosophy of Science*. https://doi.org/10.1007/s10838-024-09678-5 — Philosophical framework for a closed self-generating loop (directly underpins our simulation's convergence assumption).
+- Meissner, K.A. & Penrose, R. (2025). "The Physics of Conformal Cyclic Cosmology." arXiv:2503.24263. https://doi.org/10.48550/arxiv.2503.24263 — Microphysical crossover mechanisms between cycles; Hawking Points as data transfer between aeons.
+- Gardner, A. & Conlon, J.P. (2013). "Cosmological Natural Selection and the Purpose of the Universe." *Complexity*, 18(5), 48–56. https://doi.org/10.1002/cplx.21446 — **Key paper:** Formalizes Smolin's CNS using Price's equation. Treats physical constants as a "genome" under optimization. Directly maps to our `src/evolution.py`.
+- Davies, P.C.W. (2003). "How Bio-Friendly is the Universe?" *International Journal of Astrobiology*, 2(2), 115–120. https://doi.org/10.1017/s1473550403001514 — Distinguishes "minimally biophilic" vs "optimally biophilic" universes. Academic basis for our Gaussian fitness function.
+
+### Recent Extensions (2018–2025)
+- Gurzadyan, V.G. & Penrose, R. (2020). "CCC and the Fermi Paradox." *European Physical Journal Plus*, 135, 927.
+- Vazza, F. & Feletti, A. (2020). "The Quantitative Comparison Between the Neuronal Network and the Cosmic Web." *Frontiers in Physics*, 8, 525731.
+- Vanchurin, V. (2020). "The World as a Neural Network." *Entropy*, 22(11), 1210.
+- Azhar, F. & Loeb, A. (2021). "Cosmological Natural Selection: A Review and Open Questions." arXiv:2106.04596.
+- Adams, F.C. (2019). "The Degree of Fine-Tuning in our Universe — and Others." *Physics Reports*, 807, 1–111.
+- Zurek, W.H. (2022). "Quantum Theory of the Classical: Einselection, Envariance, Quantum Darwinism." *Physics Today*, 75(9).
+- Wolfram, S. (2020). *A Project to Find the Fundamental Theory of Physics*. Wolfram Media.
+
 ### Foundational
 - Penrose, R. (2010). *Cycles of Time: An Extraordinary New View of the Universe*. Bodley Head.
 - Smolin, L. (1997). *The Life of the Cosmos*. Oxford University Press.
 - Wheeler, J.A. (1990). "Information, Physics, Quantum: The Search for Links." *Complexity, Entropy, and the Physics of Information*.
 - Bostrom, N. (2003). "Are You Living in a Computer Simulation?" *Philosophical Quarterly*, 53(211), 243–255.
+- Lloyd, S. (2006). *Programming the Universe*. Knopf.
 
-### Recent (2018–2025)
-- Penrose, R. (2018). "The Big Bang and its Dark-Matter Content: Whence, Whither, and Wherefore." *Foundations of Physics*, 48(10), 1177–1190.
-- Smolin, L. (2021). "Cosmological Natural Selection and the Function of Consciousness." Preprint.
-- Gurzadyan, V.G. & Penrose, R. (2020). "CCC and the Fermi Paradox." *European Physical Journal Plus*, 135, 927.
-- Tegmark, M. (2014). *Our Mathematical Universe*. Knopf. — multiverse + simulation crossover.
-- Vazza, F. & Feletti, A. (2020). "The Quantitative Comparison Between the Neuronal Network and the Cosmic Web." *Frontiers in Physics*, 8, 525731.
-- Zurek, W.H. (2022). "Quantum Theory of the Classical: Einselection, Envariance, Quantum Darwinism." *Physics Today*, 75(9). — quantum Darwinism as selection mechanism.
-- Carroll, S. (2020). *Something Deeply Hidden*. Dutton. — many-worlds + information in quantum mechanics.
-- Vanchurin, V. (2020). "The World as a Neural Network." *Entropy*, 22(11), 1210. — universe as learning system.
-- Adams, F.C. (2019). "The Degree of Fine-Tuning in our Universe — and Others." *Physics Reports*, 807, 1–111. — comprehensive review of fine-tuning landscape.
-- Azhar, F. & Loeb, A. (2021). "Cosmological Natural Selection: A Review and Open Questions." arXiv:2106.04596.
+## Academic Grounding of This Implementation
 
-### Simulation & Computation
-- Wolfram, S. (2020). *A Project to Find the Fundamental Theory of Physics*. Wolfram Media. — computational universe.
-- Deutsch, D. (2023). "Constructor Theory of Information." *Proceedings of the Royal Society A*. — information as fundamental.
-- Lloyd, S. (2006). *Programming the Universe*. Knopf. — universe as quantum computer (foundational but still cited).
+| Code Component | Academic Basis |
+|---------------|---------------|
+| `evolution.py` selection mechanism | Gardner & Conlon (2013) — Price's equation applied to physical constants as character types |
+| Convergence to single attractor | Le Bihan (2024) — Aeon Monism: single self-generating system |
+| Gaussian fitness function | Davies (2003) — "optimally biophilic" universe targeting intelligence maximization |
+| Information transfer through singularity | Meissner & Penrose (2025) — Hawking Points as cross-aeon data carriers |
+| Mutable physical laws | De Waal (2016) — laws evolve dynamically, not eternal constants |
