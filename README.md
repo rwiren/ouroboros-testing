@@ -105,8 +105,25 @@ python src/evolution.py --generations 150 --population 80
 
 ## References
 
-- Penrose, R. (2010). *Cycles of Time: An Extraordinary New View of the Universe*
-- Smolin, L. (1992). "Did the Universe Evolve?" *Classical and Quantum Gravity*
-- Wheeler, J.A. (1990). "Information, Physics, Quantum: The Search for Links"
-- Bostrom, N. (2003). "Are You Living in a Computer Simulation?"
-- Smolin, L. (1997). *The Life of the Cosmos* — cosmological natural selection theory
+### Foundational
+- Penrose, R. (2010). *Cycles of Time: An Extraordinary New View of the Universe*. Bodley Head.
+- Smolin, L. (1997). *The Life of the Cosmos*. Oxford University Press.
+- Wheeler, J.A. (1990). "Information, Physics, Quantum: The Search for Links." *Complexity, Entropy, and the Physics of Information*.
+- Bostrom, N. (2003). "Are You Living in a Computer Simulation?" *Philosophical Quarterly*, 53(211), 243–255.
+
+### Recent (2018–2025)
+- Penrose, R. (2018). "The Big Bang and its Dark-Matter Content: Whence, Whither, and Wherefore." *Foundations of Physics*, 48(10), 1177–1190.
+- Smolin, L. (2021). "Cosmological Natural Selection and the Function of Consciousness." Preprint.
+- Gurzadyan, V.G. & Penrose, R. (2020). "CCC and the Fermi Paradox." *European Physical Journal Plus*, 135, 927.
+- Tegmark, M. (2014). *Our Mathematical Universe*. Knopf. — multiverse + simulation crossover.
+- Vazza, F. & Feletti, A. (2020). "The Quantitative Comparison Between the Neuronal Network and the Cosmic Web." *Frontiers in Physics*, 8, 525731.
+- Zurek, W.H. (2022). "Quantum Theory of the Classical: Einselection, Envariance, Quantum Darwinism." *Physics Today*, 75(9). — quantum Darwinism as selection mechanism.
+- Carroll, S. (2020). *Something Deeply Hidden*. Dutton. — many-worlds + information in quantum mechanics.
+- Vanchurin, V. (2020). "The World as a Neural Network." *Entropy*, 22(11), 1210. — universe as learning system.
+- Adams, F.C. (2019). "The Degree of Fine-Tuning in our Universe — and Others." *Physics Reports*, 807, 1–111. — comprehensive review of fine-tuning landscape.
+- Azhar, F. & Loeb, A. (2021). "Cosmological Natural Selection: A Review and Open Questions." arXiv:2106.04596.
+
+### Simulation & Computation
+- Wolfram, S. (2020). *A Project to Find the Fundamental Theory of Physics*. Wolfram Media. — computational universe.
+- Deutsch, D. (2023). "Constructor Theory of Information." *Proceedings of the Royal Society A*. — information as fundamental.
+- Lloyd, S. (2006). *Programming the Universe*. Knopf. — universe as quantum computer (foundational but still cited).
