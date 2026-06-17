@@ -1,6 +1,7 @@
 # Ouroboros Testing
 
 [![Version](https://img.shields.io/badge/Version-v0.1.0-yellow.svg)](CHANGELOG.md)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rwiren/ouroboros-testing/blob/main/notebooks/ouroboros_simulation.ipynb)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--17-orange.svg)](#)
 
