@@ -1,6 +1,6 @@
 # Ouroboros Testing
 
-[![Version](https://img.shields.io/badge/Version-v0.2.0-yellow.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-v0.3.0-yellow.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--17-orange.svg)](#)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rwiren/ouroboros-testing/blob/main/notebooks/ouroboros_simulation.ipynb)
@@ -98,10 +98,10 @@ python src/evolution.py --generations 150 --population 80
 ## Future Directions
 
 - [ ] More constants (20+ dimensional landscape)
-- [ ] Multiple stable attractors (could alien physics exist?)
+- [x] Multiple stable attractors (could alien physics exist?)
 - [ ] Crossover operator (merging universes via black hole collisions)
 - [ ] Information-theoretic compression model (what survives the singularity?)
-- [ ] Emergence detection (cellular automata within each universe)
+- [x] Emergence detection (cellular automata within each universe)
 
 ## References
 

@@ -24,3 +24,18 @@
 - CLI script: `python src/evolution.py --generations 100 --population 50`
 - Visualization: fitness convergence, distance to our universe, constant comparison
 - README with full hypothesis documentation and academic references
+
+## [0.3.0] - 2026-06-17
+
+### Added
+- **Speciation engine** (`src/speciation.py`) — niched GA with fitness sharing, discovers 3 viable physics islands (our universe, silicon universe, plasma universe)
+- **Cellular automata complexity** (`src/complexity.py`) — replaces Gaussian proxy with actual emergence measurement (Shannon entropy + LZW compression + activity)
+- **Colab notebook extensions** — speciation PCA visualization + CA emergence demo + GA with CA fitness
+- Three universe types visualized: dead, chaotic, complex (edge of chaos)
+- Evolution with actual measured complexity (no proxy fitness)
+
+### Key Results
+- Speciation: population splits into 3 distinct clusters in PCA space
+- CA fitness: "our" constants produce edge-of-chaos dynamics (sustained activity, moderate entropy)
+- Dead universes (high Λ): zero activity after 5 steps
+- Chaotic universes: high entropy but no structure (random noise)
