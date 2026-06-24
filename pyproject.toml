@@ -1,0 +1,37 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name        = "ouroboros-testing"
+version     = "0.4.0"
+description = "Cosmological genetic algorithm simulating the Ouroboros Singularity Hypothesis"
+readme      = "README.md"
+license     = { text = "MIT" }
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.scripts]
+ouroboros-evolve   = "evolution:main"
+ouroboros-analysis = "analysis:main"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths    = ["tests"]
+addopts      = "-v"

@@ -6,12 +6,22 @@ We run the CA and measure emergent complexity via Shannon entropy + compression.
 
 The "edge of chaos" — moderate entropy, low compression — indicates
 complex self-organizing systems (where intelligence could emerge).
+
+All stochastic operations accept an explicit ``rng`` (``numpy.random.Generator``)
+for reproducible experiments.
 """
+
+import os
+import sys
+from collections import Counter
+from typing import Optional
 
 import numpy as np
 import matplotlib.pyplot as plt
-from collections import Counter
 import zlib
+
+# Allow running as a script directly from the src/ directory
+sys.path.insert(0, os.path.dirname(__file__))
 
 
 def constants_to_ca_rule(constants: dict) -> dict:
@@ -43,12 +53,24 @@ def constants_to_ca_rule(constants: dict) -> dict:
     }
 
 
-def run_ca(rule: dict, steps: int = 100) -> np.ndarray:
-    """Run 2D cellular automata with given rules. Returns history."""
+def run_ca(rule: dict, steps: int = 100, rng: Optional[np.random.Generator] = None) -> np.ndarray:
+    """Run 2D cellular automata with given rules. Returns history.
+
+    Parameters
+    ----------
+    rule:
+        Dict returned by :func:`constants_to_ca_rule`.
+    steps:
+        Number of time steps to simulate.
+    rng:
+        Seeded generator for reproducible initial state and decay.
+        If *None*, falls back to the global NumPy RNG.
+    """
+    _rng = rng if rng is not None else np.random.default_rng()
     size = rule["grid_size"]
-    grid = (np.random.random((size, size)) < 0.3).astype(np.uint8)
+    grid = (_rng.random((size, size)) < 0.3).astype(np.uint8)
     history = [grid.copy()]
-    
+
     for _ in range(steps):
         # Count neighbors (Moore neighborhood)
         neighbors = sum(
@@ -56,7 +78,7 @@ def run_ca(rule: dict, steps: int = 100) -> np.ndarray:
             for i in [-1, 0, 1] for j in [-1, 0, 1]
             if not (i == 0 and j == 0)
         )
-        
+
         # Apply rules
         new_grid = np.zeros_like(grid)
         # Birth
@@ -67,12 +89,12 @@ def run_ca(rule: dict, steps: int = 100) -> np.ndarray:
         new_grid[survive_mask] = 1
         # Decay
         if rule["decay"] > 0:
-            decay_mask = np.random.random((size, size)) < rule["decay"]
+            decay_mask = _rng.random((size, size)) < rule["decay"]
             new_grid[decay_mask] = 0
-        
+
         grid = new_grid
         history.append(grid.copy())
-    
+
     return np.array(history)
 
 
@@ -122,13 +144,22 @@ def measure_complexity(history: np.ndarray) -> dict:
     }
 
 
-def ca_fitness(constants: dict) -> float:
+def ca_fitness(constants: dict, rng: Optional[np.random.Generator] = None, steps: int = 80) -> float:
     """Compute fitness by actually running a cellular automaton.
-    
+
     This replaces the Gaussian proxy with measured emergence.
+
+    Parameters
+    ----------
+    constants:
+        Universe constants dict.
+    rng:
+        Seeded generator for reproducibility.
+    steps:
+        Number of CA time steps (reduce for faster approximate scores).
     """
     rule = constants_to_ca_rule(constants)
-    history = run_ca(rule, steps=80)
+    history = run_ca(rule, steps=steps, rng=rng)
     metrics = measure_complexity(history)
     return metrics["complexity_score"]
 
