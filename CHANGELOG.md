@@ -1,5 +1,16 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- **`CONTRIBUTING.md`** — contribution workflow, quality expectations, and issue-reporting checklist
+
+### Changed
+- **`README.md`** — updated version/last-updated badges to match current release metadata
+- **`docs/methods.md`** — aligned default mutation rate text with canonical config (`0.06` in `configs/default.yaml`)
+
+---
+
 ## [0.4.0] - 2026-06-24
 
 ### Added
