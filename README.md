@@ -1,8 +1,8 @@
 # Ouroboros Testing
 
-[![Version](https://img.shields.io/badge/Version-v0.3.0-yellow.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-v0.4.0-yellow.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--17-orange.svg)](#)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--24-orange.svg)](#)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rwiren/ouroboros-testing/blob/main/notebooks/ouroboros_simulation.ipynb)
 
 Exploring the **Ouroboros Singularity Hypothesis** through simulation — can universes evolve intelligence that seeds new universes, forming a closed cosmic loop?

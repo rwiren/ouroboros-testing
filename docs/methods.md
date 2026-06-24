@@ -97,7 +97,7 @@ Each constant *c_i* is mutated independently:
 
 $$c_i' = \text{clip}\!\left(c_i + \mathcal{N}(0,\, \sigma_m),\; 0,\; 1\right) \quad \text{with probability } p_m = 0.3$$
 
-Default `mutation_rate` (σ_m) = 0.08.
+Default `mutation_rate` (σ_m) = 0.06.
 
 The 30 % per-gene mutation probability is intentionally higher than the oft-cited 1/*L* rule (L = 6 genes) to model the noisy information channel through the singularity.
 
