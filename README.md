@@ -87,6 +87,7 @@ This models the anthropic constraints:
 ├── references.bib                   ← BibTeX bibliography
 ├── pyproject.toml                   ← Package metadata and dependencies
 ├── requirements.txt
+├── CONTRIBUTING.md                  ← Contribution guidelines
 ├── CHANGELOG.md
 └── LICENSE (MIT)
 ```
@@ -110,6 +111,10 @@ python src/evolution.py --generations 150 --population 80 --seed 42
 ```bash
 python src/analysis.py --mode multi-run --runs 30 --generations 100
 ```
+
+## Contributing
+
+Contributions are welcome. Please follow the workflow and quality expectations in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## ⚠️ Limitations and Academic Caveats
 
