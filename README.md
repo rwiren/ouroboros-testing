@@ -66,14 +66,27 @@ This models the anthropic constraints:
 ## Project Structure
 
 ```
+├── src/
+│   ├── fitness.py                   ← FitnessFunction protocol + Gaussian/legacy fitness
+│   ├── evolution.py                 ← Main GA: initialize, evaluate, select, reproduce
+│   ├── complexity.py                ← Cellular automata emergence engine
+│   ├── speciation.py                ← Niched GA for discovering alternative physics
+│   └── analysis.py                  ← Multi-run statistics + sensitivity sweeps
+├── tests/
+│   ├── test_fitness.py
+│   ├── test_evolution.py
+│   ├── test_complexity.py
+│   └── test_speciation.py
+├── configs/
+│   └── default.yaml                 ← Canonical hyperparameter configuration
 ├── notebooks/
 │   └── ouroboros_simulation.ipynb   ← Interactive Colab (start here)
-├── src/
-│   └── evolution.py                 ← Standalone simulation script
-├── outputs/
-│   └── ouroboros_evolution.png      ← Local run output
 ├── docs/
-│   └── images/                      ← Result visualizations
+│   ├── methods.md                   ← Formal methods description
+│   └── images/                      ← Result visualisations
+├── references.bib                   ← BibTeX bibliography
+├── pyproject.toml                   ← Package metadata and dependencies
+├── requirements.txt
 ├── CHANGELOG.md
 └── LICENSE (MIT)
 ```
@@ -82,11 +95,35 @@ This models the anthropic constraints:
 
 **Colab (recommended):** Click the badge above — runs in browser, no setup needed.
 
-**Local:**
+**Local (with config file):**
 ```bash
-pip install numpy matplotlib
-python src/evolution.py --generations 150 --population 80
+pip install -r requirements.txt
+python src/evolution.py --config configs/default.yaml
 ```
+
+**Local (CLI flags):**
+```bash
+python src/evolution.py --generations 150 --population 80 --seed 42
+```
+
+**Statistical analysis over 30 runs:**
+```bash
+python src/analysis.py --mode multi-run --runs 30 --generations 100
+```
+
+## ⚠️ Limitations and Academic Caveats
+
+This project is a **toy simulation** intended to demonstrate that evolutionary algorithms can be applied to cosmological fine-tuning questions.  **It does not validate the Ouroboros Hypothesis.**
+
+| Limitation | Detail |
+|-----------|--------|
+| **Proxy fitness** | No physical simulation is performed. The fitness function is a hand-tuned mathematical convenience. |
+| **Circular normalisation** | The target constants are chosen so our universe scores 1.0 *by construction*. "Convergence" is tautological. |
+| **Hypothetical peaks** | The Silicon/Plasma Universe peaks in `speciation.py` are toy configurations with no basis in published alternative-physics models. |
+| **6-constant simplification** | Real fine-tuning analyses treat 20+ parameters (Adams 2019). |
+| **No crossover** | Single-parent reproduction limits landscape exploration. |
+
+For a rigorous multi-run analysis (mean ± std over ≥ 30 seeds), see `src/analysis.py` and `docs/methods.md`.
 
 ## Philosophical Implications
 

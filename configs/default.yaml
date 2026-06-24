@@ -1,0 +1,23 @@
+# configs/default.yaml — Default configuration for the Ouroboros Cosmological GA
+#
+# Pass this file to the CLI with:
+#   python src/evolution.py --config configs/default.yaml
+#
+# Individual flags (--generations, --seed, …) override values here.
+
+evolution:
+  population_size: 80        # Number of universes per generation
+  generations:     150       # Number of cosmic cycles
+  mutation_rate:   0.06      # Gaussian σ per constant (information lost through singularity)
+  elite_frac:      0.20      # Fraction of population that survives each cycle
+  seed:            42        # Integer seed for reproducibility (null = non-deterministic)
+  fitness_fn:      gaussian  # "gaussian" (default) | "ca" (cellular automata, slower)
+
+output:
+  base_dir:        outputs   # Root directory; each run gets a timestamped subdirectory
+  save_json:       true      # Save evolution_history.json
+  save_plot:       true      # Save ouroboros_evolution.png
+
+logging:
+  level:           INFO      # DEBUG | INFO | WARNING
+  file:            null      # null = stdout only; set a path for file logging
